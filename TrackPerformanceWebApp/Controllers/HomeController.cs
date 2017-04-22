@@ -1,7 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
+﻿using System.Threading.Tasks;
 using System.Web.Mvc;
 
 namespace TrackPerformanceWebApp.Controllers
@@ -10,11 +7,13 @@ namespace TrackPerformanceWebApp.Controllers
     {
         public ActionResult Index()
         {
+            Task.WaitAll(Task.Delay(1000));
             return View();
         }
 
         public ActionResult About()
         {
+            Task.WaitAll(Task.Delay(200));
             ViewBag.Message = "Your application description page.";
 
             return View();
@@ -22,6 +21,7 @@ namespace TrackPerformanceWebApp.Controllers
 
         public ActionResult Contact()
         {
+            Task.WaitAll(Task.Delay(500));
             ViewBag.Message = "Your contact page.";
 
             return View();

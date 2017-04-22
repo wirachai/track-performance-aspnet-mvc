@@ -15,7 +15,7 @@ namespace TrackPerformanceWebApp
             BundleConfig.RegisterBundles(BundleTable.Bundles);
 
             Metric.Config
-                .WithHttpEndpoint("http://localhost:1234/metrics/")
+                .WithHttpEndpoint("http://localhost:9999/metrics/")
                 .WithAllCounters();
         }
     }
